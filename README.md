@@ -1,5 +1,7 @@
 # useful-linux-commands
 
+For running some of these commands, relevant package may need to be installed.
+
 ## To check firewalls
 
 ```sh

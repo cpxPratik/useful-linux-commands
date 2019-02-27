@@ -1,6 +1,6 @@
 # useful-linux-commands
 
-For running some of these commands, relevant package may need to be installed.
+For running some of these commands, relevant package may need to be installed. It is recommended to run `man <command>` if details needed.
 
 ## To check firewalls
 
@@ -37,4 +37,11 @@ echo > <filename>
 
 ```sh
 shred -vzu secrets.json
+```
+
+## List storage space usage
+
+```sh
+du -sh <directory>
+du -sh projects/*
 ```

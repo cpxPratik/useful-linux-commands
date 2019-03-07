@@ -45,3 +45,12 @@ shred -vzu secrets.json
 du -sh <directory>
 du -sh projects/*
 ```
+
+## See disk usage on linux and docker
+
+```sh
+lsblk
+df -h
+docker system df -v
+docker ps -s
+```

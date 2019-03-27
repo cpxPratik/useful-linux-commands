@@ -2,28 +2,28 @@
 
 For running some of these commands, relevant package may need to be installed. It is recommended to run `man <command>` if details needed.
 
-## To check firewalls
+## Check firewalls
 
 ```sh
 nmap <ip_address>
 nmap -Pn <ip_address> # if ping is not allowed
 ```
 
-## To check sha256 checksum
+## Check sha256 checksum
 
-source: <https://security.stackexchange.com/a/189004/199040>
+ref: <https://security.stackexchange.com/a/189004/199040>
 
 ```sh
-sha256sum <filename>_
+sha256sum <filename>
 ```
 
-## To check MD5 checksum
+## Check MD5 checksum
 
 ```sh
 md5sum <filename>
 ```
 
-## To empty a file
+## Empty a file
 
 ```sh
 : > <filename>
@@ -33,7 +33,7 @@ or
 echo > <filename>
 ```
 
-## To shred a file
+## Shred a file
 
 ```sh
 shred -vzu secrets.json
@@ -53,4 +53,14 @@ lsblk
 df -h
 docker system df -v
 docker ps -s
+```
+
+## Recover corrupt zsh history file
+
+ref: <https://superuser.com/a/957924/412139>
+
+```sh
+mv .zsh_history .zsh_history_bad
+strings .zsh_history_bad > .zsh_history
+fc -R .zsh_history
 ```

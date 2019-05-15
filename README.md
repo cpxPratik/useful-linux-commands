@@ -73,3 +73,11 @@ ref: <https://stackoverflow.com/a/42419060/2137210>
 docker node ls -q | xargs docker node inspect \
   -f '{{ .ID }} [{{ .Description.Hostname }}]: {{ range $k, $v := .Spec.Labels }}{{ $k }}={{ $v }} {{end}}'
 ```
+
+## Copy remote/local files with rsync
+
+```sh
+rsync -vazh <SRC> <DEST>
+
+rsync -vazh root@178.125.89.65:/home/gitlab-runner/mongodb/ /home/worker/mongodb
+```

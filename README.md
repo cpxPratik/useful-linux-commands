@@ -81,3 +81,14 @@ rsync -vazh <SRC> <DEST>
 
 rsync -vazh root@178.125.89.65:/home/gitlab-runner/mongodb/ /home/worker/mongodb
 ```
+
+## Recover a "corrupt history file" in zsh
+
+ref: <https://superuser.com/a/957924>
+
+```sh
+mv ~/.zsh_history ~/.zsh_history_bad
+strings ~/.zsh_history_bad > ~/.zsh_history
+fc -R ~/.zsh_history
+rm ~/.zsh_history_bad
+```

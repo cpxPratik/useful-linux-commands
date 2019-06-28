@@ -55,16 +55,6 @@ docker system df -v
 docker ps -s
 ```
 
-## Recover corrupt zsh history file
-
-ref: <https://superuser.com/a/957924/412139>
-
-```sh
-mv .zsh_history .zsh_history_bad
-strings .zsh_history_bad > .zsh_history
-fc -R .zsh_history
-```
-
 ## See available labels on nodes of docker swarm
 
 ref: <https://stackoverflow.com/a/42419060/2137210>

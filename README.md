@@ -72,6 +72,14 @@ rsync -vazh <SRC> <DEST>
 rsync -vazh root@178.125.89.65:/home/gitlab-runner/mongodb/ /home/worker/mongodb
 ```
 
+## Copy a folder remote/local using scp
+
+Copy all from Local Location/Remote Location
+```scp -r /path/from/destination user@hostname:/path/to/destination```
+
+Copy all from Remote Location/Local Location
+```scp -r user@hostname:/path/from/destination /path/to/destination```
+
 ## Recover a "corrupt history file" in zsh
 
 ref: <https://superuser.com/a/957924>

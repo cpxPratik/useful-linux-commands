@@ -90,3 +90,9 @@ strings ~/.zsh_history_bad > ~/.zsh_history
 fc -R ~/.zsh_history
 rm ~/.zsh_history_bad
 ```
+
+## Get all of the docker container's IP addresses
+
+```sh
+docker inspect -f '{{.Name}} - {{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $(docker ps -aq)
+```
